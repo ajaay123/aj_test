@@ -27,7 +27,7 @@ if [ "$LE_INSTALL_SSL_ON_DEPLOY" = true ] ; then
 
     # Configure ssl.conf
     sudo mv /etc/httpd/conf.d/ssl.conf.template /etc/httpd/conf.d/ssl.conf
-    sudo sed -i -e "s/{DOMAIN}/$LE_SSL_DOMAIN/g" /etc/httpd/conf.d/ssl.conf
+    sudo sed -i -e "s/ajaay.net/$LE_SSL_DOMAIN/g" /etc/httpd/conf.d/ssl.conf
 
     # Install crontab
     sudo crontab /tmp/cronjob
